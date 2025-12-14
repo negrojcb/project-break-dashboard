@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/reset.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <title>Contraseñas</title>
+  </head>
+  <body class="vista-contraseñas">
+    <main>
+      <section class="app-card app-passgen">
+        <h2>Generador de contraseñas</h2>
+        <div class="app-funcionalidad">
+          <label for="longitud">Longitud de la Contraseña</label>
+          <input
+            name="longitud"
+            type="number"
+            min="12"
+            max="50"
+            id="longitud"
+          />
+          <button id="generar">Generar</button>
+          <div id="msg"></div>
+        </div>
+      </section>
+    </main>
+    <script src="/JS/contraseñas.js"></script>
+    <script src="/JS/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/reset.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <title>Meteo</title>
+  </head>
+  <body class="vista-meteo">
+    <section class="app-card app-meteo">
+      <h2 id="ciudad">Cargando...</h2>
+      <div class="app-funcionalidad">
+        <span>
+          <img id="icono-clima" src="" alt="" />
+        </span>
+        <p id="temperatura" class="main-temp">--°C</p>
+        <p id="estado-clima">Obteniendo estado...</p>
+      </div>
+      <div id="pronostico-horario" class="scroll-horizontal"></div>
+    </section>
+    <script src="/JS/meteo.js"></script>
+    <script src="/JS/scripts.js"></script>
+  </body>
+</html>

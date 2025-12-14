@@ -1,0 +1,277 @@
+:root {
+  --color-blanco: #ffffff;
+  --color-principal: #64ffda;
+  --color-texto: var(--color-blanco);
+  --color-fondo-glass: rgba(255, 255, 255, 0.05);
+  --borde-glass: 1px solid rgba(255, 255, 255, 0.1);
+  --sombra-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --radio-borde: 15px;
+  --espacio-m: 2rem;
+}
+
+body {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--color-texto);
+  font-size: 1.8rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in-out;
+  background-color: #1a1a2e;
+}
+
+h1 {
+  text-align: center;
+  padding-top: var(--espacio-m);
+  font-size: 2.5rem;
+}
+
+h2,
+h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Esta clase base NO se usa directamente en el HTML, pero es la plantilla */
+/* .glass-base {
+  background: var(--color-fondo-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radio-borde);
+  border: var(--borde-glass);
+  box-shadow: var(--sombra-glass);
+  padding: var(--espacio-m);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-base:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+} */
+
+header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.vista-landing .dashboard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+  padding: 0 2rem 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.vista-landing .app-card {
+  background: var(--color-fondo-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radio-borde);
+  border: var(--borde-glass);
+  box-shadow: var(--sombra-glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 150px;
+  padding: var(--espacio-m);
+  flex-basis: calc(50% - 4.5rem);
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.vista-landing .app-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.app-card h2 {
+  text-align: center;
+}
+
+.app-card label {
+  margin-top: 10px;
+  display: block;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.app-card input[type="text"],
+.app-card input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 2px solid var(--color-principal);
+  color: var(--color-texto);
+  border-radius: 5px 5px 0 0;
+}
+
+.app-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-principal);
+  color: #1a1a2e;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.app-card button:hover {
+  background-color: #3bffd0;
+}
+
+.app-meteo {
+  overflow-x: hidden;
+}
+.app-meteo #pronostico-horario {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  gap: 20px;
+  margin-top: 1.5rem;
+}
+
+.app-meteo .hora-item {
+  flex-shrink: 0;
+  text-align: center;
+  min-width: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 10px 5px;
+}
+
+.app-meteo .app-funcionalidad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.app-reloj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-reloj .app-funcionalidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.app-reloj #reloj-container {
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.app-reloj #fecha-container {
+  font-size: 4rem !important;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--color-principal);
+}
+
+.app-reloj #frase-container {
+  font-size: 2.8rem;
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 8rem;
+}
+
+.vista-landing .app-nav-global {
+  width: 100%;
+  margin: 3rem 0 3rem 0;
+  min-height: 10px;
+}
+
+.app-nav-global .nav-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.app-nav-global .nav-links-list li {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.app-nav-global .nav-links-list li .enlace-app {
+  display: block;
+  width: 100%;
+
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+
+  color: var(--color-principal);
+  border: 1px solid var(--color-principal);
+  border-radius: var(--radio-borde);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-nav-global .nav-links-list li .enlace-app:hover {
+  background-color: var(--color-principal);
+  color: #1a1a2e;
+  box-shadow: 0 0 10px var(--color-principal);
+}
+
+.vista-meteo {
+  max-width: 1000px;
+  margin: 20rem auto;
+  padding: 0 2rem;
+}
+.vista-contraseñas {
+  max-width: 1000px;
+  margin: 20rem auto;
+  padding: 0 2rem;
+}
+.vista-links {
+  max-width: 1000px;
+  margin: 20rem auto;
+  padding: 0 2rem;
+}
+.vista-reloj {
+  max-width: 1000px;
+  margin: 20rem auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 900px) {
+  .vista-landing .app-card {
+    flex-basis: 100%;
+    min-width: auto;
+  }
+
+  .app-nav-global .nav-links-list {
+    flex-direction: column;
+  }
+}
+
+.app-reloj #reloj-container {
+  font-size: 4rem;
+}
+.app-reloj #fecha-container {
+  font-size: 2.2rem;
+}

@@ -3,17 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Project Brake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/reset.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
   </head>
-  <body>
-    <h1>Project Break</h1>
-    <div id="div-prueba"></div>
-    <div>
-      <label for="longitud">Tu contraseña</label>
-      <input name="longitud" type="number" min="12" max="50" id="longitud" />
-      <button id="generar">Generar</button>
-      <div id="msg"></div>
-    </div>
+  <body class="vista-landing">
+    <header>
+      <h1>Project Brake</h1>
+      <nav class="app-card app-nav-global">
+        <ul class="nav-links-list">
+          <li>
+            <a href="/HTML/contraseñas.html" class="enlace-app" target="_blank">
+              Generador de Contraseñas
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/links.html" class="enlace-app" target="_blank">
+              Gestor de Enlaces
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/reloj.html" class="enlace-app" target="_blank">
+              Reloj
+            </a>
+          </li>
+          <li>
+            <a href="/HTML/meteo.html" class="enlace-app" target="_blank">
+              Meteo
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="app-card app-reloj">
+        <div class="app-funcionalidad">
+          <div id="fecha-container"></div>
+          <div id="reloj-container"></div>
+          <div id="frase-container"></div>
+        </div>
+      </section>
+
+      <section class="app-card app-meteo">
+        <h2 id="ciudad">Cargando...</h2>
+        <div class="app-funcionalidad">
+          <span>
+            <img id="icono-clima" src="" alt="" />
+          </span>
+          <p id="temperatura" class="main-temp">--°C</p>
+          <p id="estado-clima">Obteniendo estado...</p>
+        </div>
+        <div id="pronostico-horario" class="scroll-horizontal"></div>
+      </section>
+      <section class="app-card app-passgen">
+        <h2>Generador de contraseñas</h2>
+        <div class="app-funcionalidad">
+          <label for="longitud">Longitud de la Contraseña</label>
+          <input
+            name="longitud"
+            type="number"
+            min="12"
+            max="50"
+            id="longitud"
+          />
+          <button id="generar">Generar</button>
+          <div id="msg"></div>
+        </div>
+      </section>
+
+      <section class="app-card app-links">
+        <h2>Gestor de Enlaces</h2>
+        <div class="app-funcionalidad">
+          <label for="titulo">Título</label>
+          <input id="titulo" name="titulo" type="text" />
+          <label for="url">URL</label>
+          <input id="url" name="url" type="text" />
+          <button id="crear-link">Crea tu link</button>
+          <div>
+            <ul id="lista"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/JS/links.js"></script>
+    <script src="/JS/reloj.js"></script>
+    <script src="/JS/contraseñas.js"></script>
+    <script src="/JS/meteo.js"></script>
     <script src="/JS/scripts.js"></script>
   </body>
 </html>
