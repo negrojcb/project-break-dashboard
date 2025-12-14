@@ -23,4 +23,18 @@ cambiarFondo();
 
 setInterval(cambiarFondo, 15000);
 
-document.addEventListener("DOMContentLoaded", obtenerClimaCompleto);
+import { initLinks } from "./links.js";
+import { initMeteo } from "./meteo.js";
+import { initPass } from "./contraseñas.js";
+import { initReloj } from "./reloj.js";
+
+function initApps() {
+  initMeteo();
+  initLinks();
+  initPass();
+  initReloj();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initApps();
+});
