@@ -17,7 +17,7 @@ const cambiarFondo = () => {
   const arrLength = arrayImgs.length;
   let index = Math.floor(Math.random() * arrLength);
   let img = arrayImgs[index];
-  document.body.style.backgroundImage = `url('/assets/imagenes/${img}')`;
+  document.body.style.backgroundImage = `url('assets/imagenes/${img}')`;
 };
 cambiarFondo();
 
