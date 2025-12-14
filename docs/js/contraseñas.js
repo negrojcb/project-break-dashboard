@@ -1,7 +1,3 @@
-//Contraseñas
-
-// ## Generador de contraseñas seguras:
-
 const longitud = document.getElementById("longitud");
 const btn = document.getElementById("generar");
 const msg = document.getElementById("msg");
@@ -19,8 +15,6 @@ const simbolos = "!@#$%^&*()-_=+".split("");
 let caracteresObligatorios = [numeros, mayusculas, minusculas, simbolos];
 const caracteres = numeros.concat(minusculas, mayusculas, simbolos);
 const caracteresString = caracteres.join("");
-
-//incluir al menos un caracter obligatorio de cada tipo de caracter
 
 function camposObligados() {
   let obligatorios = [];
@@ -40,14 +34,14 @@ function camposRestantes(l) {
   return restantes;
 }
 function generarContrasena() {
-  const valor = parseInt(longitud.value); // Usa la variable privada 'longitud'
-  msg.innerHTML = ""; // Usa la variable privada 'msg'
+  const valor = parseInt(longitud.value);
+  msg.innerHTML = "";
 
   if (valor < 12 || valor > 50 || isNaN(valor)) {
     msg.innerText = "Por favor ingresa un número entre 12 y 50";
   } else {
-    const obligatorios = camposObligados(); // Llama a la privada
-    const restantes = camposRestantes(valor); // Llama a la privada
+    const obligatorios = camposObligados();
+    const restantes = camposRestantes(valor);
     let pass = obligatorios.concat(restantes);
     let desorden = pass.sort(() => Math.random() - 0.5);
     const tuContraseña = desorden.join("");

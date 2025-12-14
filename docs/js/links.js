@@ -1,4 +1,3 @@
-//Generador de Links
 const titulo = document.getElementById("titulo");
 const url = document.getElementById("url");
 const boton = document.getElementById("crear-link");

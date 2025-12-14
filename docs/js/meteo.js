@@ -1,5 +1,3 @@
-// Este código es la versión funcional antes de ser envuelta en el Módulo Revelador (IIFE)
-
 const API_KEY = "cf46cb2d46464bff86484316251012";
 const BASE_URL = "https://api.weatherapi.com/v1/forecast.json";
 
@@ -83,7 +81,6 @@ async function obtenerClimaCompleto() {
 
     procesarClimaActual(ciudad, grados, estadoClima, iconoURL);
 
-    // Usamos el ID de contenedor que definimos: pronostico-horario
     const contenedorPrevision = document.getElementById("pronostico-horario");
 
     if (contenedorPrevision) {
@@ -93,6 +90,3 @@ async function obtenerClimaCompleto() {
     mostrarError(error.message);
   }
 }
-
-// Esta línea iniciaría la aplicación si no estuviera modularizada
-// obtenerClimaCompleto();

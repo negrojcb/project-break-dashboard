@@ -237,25 +237,78 @@ header {
   box-shadow: 0 0 10px var(--color-principal);
 }
 
-.vista-meteo {
-  max-width: 1000px;
+.vista-meteo .app-card {
+  background: var(--color-fondo-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radio-borde);
+  border: var(--borde-glass);
+  box-shadow: var(--sombra-glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 150px;
+  padding: var(--espacio-m);
+  flex-basis: calc(50% - 4.5rem);
+  min-width: 400px;
   margin: 20rem auto;
-  padding: 0 2rem;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.vista-contraseñas {
-  max-width: 1000px;
+.vista-contraseñas .app-card {
+  background: var(--color-fondo-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radio-borde);
+  border: var(--borde-glass);
+  box-shadow: var(--sombra-glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 150px;
+  padding: var(--espacio-m);
+  flex-basis: calc(50% - 4.5rem);
+  min-width: 400px;
   margin: 20rem auto;
-  padding: 0 2rem;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.vista-links {
-  max-width: 1000px;
+.vista-links .app-card {
+  background: var(--color-fondo-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radio-borde);
+  border: var(--borde-glass);
+  box-shadow: var(--sombra-glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 150px;
+  padding: var(--espacio-m);
+  flex-basis: calc(50% - 4.5rem);
+  min-width: 400px;
   margin: 20rem auto;
-  padding: 0 2rem;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.vista-reloj {
-  max-width: 1000px;
+
+.vista-reloj .app-card {
+  background: var(--color-fondo-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radio-borde);
+  border: var(--borde-glass);
+  box-shadow: var(--sombra-glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 150px;
+  padding: var(--espacio-m);
+  flex-basis: calc(50% - 4.5rem);
+  min-width: 400px;
   margin: 20rem auto;
-  padding: 0 2rem;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 @media (max-width: 900px) {
